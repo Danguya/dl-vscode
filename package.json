@@ -8,7 +8,7 @@
         "type": "git",
         "url": "https://github.com/DesignLiquido/vscode"
     },
-    "version": "0.10.15",
+    "version": "0.10.16",
     "engines": {
         "vscode": "^1.68.0"
     },
@@ -52,7 +52,7 @@
         "watch-web": "npm run -S esbuild-web -- --sourcemap --sources-content=false --watch",
         "montar": "npm run -S esbuild-base -- --sourcemap --sources-content=false && npm run -S esbuild-web -- --sourcemap --sources-content=false",
         "empacotar": "yarn esbuild-base && yarn copy-files-from-to && vsce package --yarn",
-        "publicar": "vsce publish",
+        "publicar": "yarn vsce publish",
         "publicar-pre-lancamento": "vsce publish --pre-release",
         "vscode:pre-publicar": "rimraf dist && npm run -S esbuild-base -- --minify && npm run -S esbuild-web -- --minify",
         "testar": "npm run typecheck",
@@ -461,6 +461,7 @@
         "@vscode/debugadapter": "^1.53.0",
         "@vscode/debugadapter-testsupport": "^1.55.1",
         "@vscode/debugprotocol": "^1.53.0",
+        "@vscode/vsce": "^2.24.0",
         "await-notify": "^1.0.1",
         "base64-js": "^1.5.1",
         "copy-files-from-to": "^3.9.0",
@@ -472,8 +473,8 @@
         "webpack-cli": "^5.0.1"
     },
     "dependencies": {
-        "@designliquido/delegua-node": "^0.33.11",
-        "@designliquido/foles": "^0.6.1",
+        "@designliquido/delegua-node": "^0.33.14",
+        "@designliquido/foles": "^0.6.2",
         "@designliquido/lmht-js": "^0.4.9",
         "lodash": "^4.17.21",
         "real-executable-path": "^3.0.0"
